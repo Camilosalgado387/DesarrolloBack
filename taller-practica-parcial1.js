@@ -36,4 +36,16 @@ let lista = [1,1,1,1,2,2,3,3,3,4,4,5,6,7,8]
 
 //Punto 4
 
+function fibonacci(n){
+  if (n === 0) {
+      return 0
+  } else if (n === 1) {
+      return 1
+  }
+	return fibonacci(n - 1) + fibonacci(n - 2)
+}
 
+//console.log(fibonacci(6))
+
+//Punto 5
+//usaremos el metodo 'set' que solo almacena valores unicos en una lista
