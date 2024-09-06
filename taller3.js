@@ -13,13 +13,16 @@ function desglosarString(string, tipo) {
 
 //Punto 2   
 function twoSum(nums, target) {
-    let map = new Map();
+    let result = []
     for (let i = 0; i < nums.length; i++) {
-        let complement = target - nums[i];
-        if (map.has(complement)) {
-            return [map.get(complement), i];
+        for (let j = i+1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                result.push(i)
+                result.push(j)
+            }
         }
-        map.set(nums[i], i);
     }
-    return [];
+    return result
+    
 }
+//Punto 3
