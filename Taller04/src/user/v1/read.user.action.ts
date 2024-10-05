@@ -97,24 +97,24 @@ const users = [
     "team": "axvedw",
     "faction": "Rebels"
   }
-];
+]
 
 // DECLARE ACTION FUNCTION
 //punto 1
 async function getUsersByHobby(hobby:string): Promise<any[]> {
-  return users.filter(user => user.hobbies.includes(hobby));
+  return users.filter(user => user.hobbies.includes(hobby))
 }
 //Punto 2
 async function userExists(id:number): Promise<boolean> {
-  return users.some(user => user.id === id);
+  return users.some(user => user.id === id)
 }
 //Punto 3
 async function totalExperienceByTeam(team: string): Promise<number> {
-  return users.filter(user => user.team === team).reduce((acc, user) => acc + user.years, 0);
+  return users.filter(user => user.team === team).reduce((acc, user) => acc + user.years, 0)
 }
 //Punto 4
 async function usersByFaction(faction:string):Promise<any[]> {
-  return users.filter(user => user.faction === faction);
+  return users.filter(user => user.faction === faction)
 }
 //Punto 5
 
@@ -127,8 +127,8 @@ async function newUser(id:number, name:string, hobbies:string[], years:number, t
     team,
     faction
   }
-  users.push(newUser);
-  return users;
+  users.push(newUser)
+  return users
 }
 // EXPORT ACTION FUNCTION
-export {getUsersByHobby, userExists, totalExperienceByTeam, usersByFaction, newUser};
+export {getUsersByHobby, userExists, totalExperienceByTeam, usersByFaction, newUser}
